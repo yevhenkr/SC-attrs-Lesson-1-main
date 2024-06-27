@@ -4,11 +4,19 @@ import styled, {keyframes} from 'styled-components';
 
 const Navigation = () => {
     return (
-        <Menu>
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem>Item 3</MenuItem>
-        </Menu>
+        <nav>
+            <Menu>
+                <MenuItem>
+                    <a href="">Item 1</a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="">Item 2</a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="">Item 3</a>
+                </MenuItem>
+            </Menu>
+        </nav>
     );
 };
 
@@ -64,16 +72,22 @@ const Header = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+    button {
+        background-color: transparent;
+    }
 `;
 
 const Menu = styled.div`
   display: flex;
   gap: 15px;
+    list-style: none;
 `;
 
 const MenuItem = styled.div`
-  color: white;
-  font-weight: bold;
+    a {
+        color: white;
+        font-weight: bold;
+    }
 `;
 
 const LoginBtn = styled.div`
